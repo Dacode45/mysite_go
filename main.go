@@ -54,7 +54,7 @@ func httpInterceptor(router http.Handler) http.Handler{
     switch req.Method{
     case "GET":
       //TODO sometimes you don't want StatusOK, but we will for Now
-      common.LogAccess(w, req, elapsedTime)
+      common.LogAccess(w, req, finishTime, elapsedTime)
     case "POST":
       //check http.StatusCreated
     }
